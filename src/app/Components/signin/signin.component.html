@@ -1,0 +1,80 @@
+<p>signin works!</p>
+
+<div class="section">
+    <div class="form">
+        <div fxLayout="column" fxLayoutAlign="space-evenly center">
+            <div class="heading">
+                <p class="color1">F</p>
+                <p class="color2">u</p>
+                <p class="color3">n</p>
+                <p class="color4">d</p>
+                <p class="color5">o</p>
+                <p class="color6">o</p>
+        
+            </div>
+
+            <div class="title">
+                <p>Sign in</p>
+        
+            </div>
+            <div class="title1">
+                <p>Use your Fundoo Account</p>
+        
+            </div>
+            
+        <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+            <div class="emailorphone">
+                
+            <mat-form-field appearance="outline">
+                <mat-label>Email or phone</mat-label>
+                <input type="text" formControlName="email" matInput placeholder="Email or phone">
+                <mat-error>Enter an email or phone number</mat-error>
+              </mat-form-field>
+
+            </div>
+
+            <div class="forgotemailbutton">
+                <button class="button" routerLink="/forgotemail">Forgot email?</button>
+        
+            </div>
+
+            <div class="password">
+                     
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="text" formControlName="password" matInput placeholder="Password">
+                <mat-error>Enter a password</mat-error>
+              </mat-form-field>
+
+
+            </div>
+
+            <!-- <div class="forgotpasswordbutton">
+                <button class="button5">Forgot password?</button>
+        
+            </div> -->
+
+            <div class="paragraph">
+                <p>Not your computer? Use Guest mode to sign in privately.</p>
+
+            </div>
+
+            <div class="learnmorebutton">
+                <button class="button2">Learn more</button>
+        
+            </div>
+
+            <div class="createaccountandnextbutton">
+                <button class="button3" routerLink="/register">Create account</button>
+        
+                <button class="button4">Next</button>
+        
+        
+            </div>
+
+        </form>  <!--closing tag of form-->
+
+        </div> <!--closing div of div fxlayout column-->
+
+    </div> <!--closing div of form-->
+</div>  <!--closing div of section-->
