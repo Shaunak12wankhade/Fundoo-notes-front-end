@@ -8,7 +8,9 @@ export class HttpService {
   constructor( private http :HttpClient) { }
 
   postService(url:any, data:any, token:boolean=false, httpOptions:any){
-   
+   console.log(data)
    return this.http.post(this.baseurl+url, data, token && httpOptions)
   }
+
+  
 }
