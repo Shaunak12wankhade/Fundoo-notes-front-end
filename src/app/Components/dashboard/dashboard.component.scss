@@ -1,12 +1,62 @@
-.example-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+// .example-container {
+//     display: flex;
+//     flex-direction: column;
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//   }
+.section{
+  background-color: white;
+}
+.form{
+  background-color: white;
+}
+.mat-toolbar{
+  background-color: white;
+  // border: 2px solid black;
+}
+.keepimg{
+  cursor: pointer;
+  color: red;
+
+}
+.h1{
+  color: royalblue;
+  cursor: pointer;
+
+}
+
+.searchbar{
+  // border: 2px solid green;
+  height: 60%;
+  width: 60%;
+}
+// .searchbar1{
+//   border: 2px solid pink;
+//    display: flex;
+//    flex-direction: column;
+//    width: 70%;
+//   height: 0%;
+//   position: relative;
+//   top: 5%;
+
+// }
+.example-icon{
+  // border: 2px solid yellow;
+}
+.closebutton{
+  // border: 1px solid red;
+  position: relative;
+  left: 85%;
+  opacity: 0.54;
+  width: 30px; 
+  height: 30px;
+  margin-top: -15%;
+  // visibility: hidden;
+  // background-color: whitesmoke;
+}
   
   .example-is-mobile .example-toolbar {
     position: fixed;
@@ -28,4 +78,27 @@
     /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
     flex: 1 0 auto;
+  }
+
+  .iconsandlists :hover{
+    background-color: #feefc3;
+    // width: 100%;
+    // height: 50%;
+
+  }
+
+  .lightbulb{
+    
+    padding-left: 22px;
+    letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    cursor: pointer;
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 0 25px 25px 0;
+
   }
