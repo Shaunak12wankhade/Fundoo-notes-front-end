@@ -37,7 +37,7 @@ export class RegistrationComponent implements OnInit {
         {
           console.log(this.registerForm.value);
           
-          let payload={
+          let payload={    //this payload is a json object
             firstName:this.registerForm.value.firstName, // leftside firstname is exactly same as that of backend API and rightside firstname i.e., ,firstName should be exact same as that of formcontrolname in .html file or same as written above in ngonit 
             lastName:this.registerForm.value.lastName,
             email:this.registerForm.value.userName,
@@ -48,7 +48,7 @@ export class RegistrationComponent implements OnInit {
 
 
           }
-          this.user.userRegister(payload).subscribe((response:any)=>{
+          this.user.userRegister(payload).subscribe((response:any)=>{    //subscribe is a method from observable
             console.log(response)
           })
         } else{
