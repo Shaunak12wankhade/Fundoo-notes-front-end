@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/userservice/user.service';
 
 @Component({
@@ -8,10 +9,10 @@ import { UserService } from 'src/app/services/userservice/user.service';
   styleUrls: ['./forgotpassword.component.scss']
 })
 export class ForgotpasswordComponent implements OnInit {
-
+  token:any;
   forgotpasswordForm!: FormGroup;
   submitted = false;
-  constructor( private formBuilder: FormBuilder , private user:UserService) { }
+  constructor( private formBuilder: FormBuilder , private user:UserService, private activatedroute: ActivatedRoute) { }
 
   ngOnInit(): void {
 
@@ -19,6 +20,8 @@ export class ForgotpasswordComponent implements OnInit {
       newpassword:['',[Validators.required, Validators.minLength(6)]],  //this newpassword name in .ts file and the formcontrolname in .html file should be same
       confirmPassword:['',Validators.required]
     })
+    this.token = this.activatedroute.snapshot.paramMap.get('token');
+    console.log(this.token);
   }
   // convenience getter for easy access to form fields
   // get f() { return this.forgotpasswordForm.controls;}
@@ -31,11 +34,11 @@ export class ForgotpasswordComponent implements OnInit {
           console.log(this.forgotpasswordForm.value);
 
           let forgotpasswordobject={
-            password:this.forgotpasswordForm.value.newpassword,
-            confirmpassword:this.forgotpasswordForm.value.confirmPassword
+            newPassword:this.forgotpasswordForm.value.newpassword,
+            // confirmpassword:this.forgotpasswordForm.value.confirmPassword
             
           }
-          this.user.userforgotpassword(forgotpasswordobject).subscribe((response:any)=>{
+          this.user.forgetpassword(forgotpasswordobject,this.token).subscribe((response:any)=>{
             console.log(response);
           })
 
