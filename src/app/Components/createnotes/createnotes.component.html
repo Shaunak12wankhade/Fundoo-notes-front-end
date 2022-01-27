@@ -4,14 +4,13 @@
     <form [formGroup]="createnotesForm" (ngSubmit)="onSubmit()">
 
         <div class="createnote">
-            
 
-            <div class="takeanote" *ngIf="!writenote" (click)="takeanote()" fxLayout="column"
-                fxLayoutAlign="center center">
+
+            <div class="takeanote" *ngIf="!writenote" (click)="takeanote()" fxLayout="column"fxLayoutAlign="center center">
 
                 <mat-form-field class="matform1" appearance="outline">
                     <!-- <mat-icon>search</mat-icon> -->
-                    <input class="note1" type="text" matInput placeholder="Take a note..." >
+                    <input class="note1" type="text" matInput placeholder="Take a note...">
 
                     <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
                         <img class="checkbox" src="../../../assets/check_box_black_24dp.svg" alt="">
@@ -31,7 +30,7 @@
                 </mat-form-field>
 
             </div>
-          
+
 
             <div class="title" *ngIf="writenote" fxLayout="column" fxLayoutAlign="center center">
 
@@ -49,16 +48,17 @@
 
                 <mat-form-field class="matform3" appearance="outline">
 
-                    <input class="note2" type="text" matInput placeholder="Take a note..." formControlName="description">
+                    <input class="note2" type="text" matInput placeholder="Take a note..."
+                        formControlName="description">
 
                 </mat-form-field>
 
-                
-            <div class="closebutton">
 
-                <button class="close">Close</button>
+                <div class="closebutton">
 
-            </div>
+                    <button class="close">Close</button>
+
+                </div>
 
 
             </div>
@@ -69,6 +69,3 @@
 
 
 </div>
-
-
-
