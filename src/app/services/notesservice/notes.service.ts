@@ -8,7 +8,7 @@ import { HttpService } from '../httpservice/http.service';
 export class NotesService {
   token:any
   constructor( private httpService: HttpService ) {
-    this.token=localStorage.getItem("token")  // this token is taken from backend that is generated & stored in your local storage after you signin.  
+    this.token=localStorage.getItem("token")  // this token is taken from backend that is generated & stored in our local storage after we signin.  
    }
 
    usercreatenotes(data:any){
