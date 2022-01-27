@@ -14,6 +14,14 @@ border: none;
     margin-top: 10%;
 
 }
+
+.matform1{
+    width: 780px; height: 0px;
+    margin-top: 20px;
+    margin-left: 90px;
+    border: none;
+
+}
 .note1{
     background: transparent;
     border: none;
@@ -34,12 +42,97 @@ border: none;
 }
 
 
-.closebutton{
-    margin-top: -3%;
-    margin-bottom: -4%;
+.checkbox{
+    margin-left: 1650%; 
+    margin-bottom:-2%;
+     position: relative; 
+     top: -35%; left: -100%; 
+     width: 25px; 
+     height: 25px; 
+     opacity: 0.54;
+}
+
+.brush{
+    margin-left: 1500%; 
+    margin-top: -66%; 
+    position: relative; 
+    top: -1%; left: 80%; 
+    width: 25px; 
+    height: 25px; 
+    opacity: 0.54;
+}
+
+.insertphoto{
+    margin-left: 1550%; 
+    margin-top: 45%; 
+    position: relative; 
+    top: -55%; 
+    left: 58%; 
+    width: 25px; 
+    height: 25px;
+    opacity: 0.54;
+
+}
+
+
+.title{
+    // border:  2px solid red;
+    height: 240px;
+    display: flex;
     position: relative;
+    top: 2%;
+    margin-top: 3%;
+    
+    // ::ng--deep.mat-form-field{
+    //     border-radius: 0px !important;
+    //     border: none;
+    // }
+    
+}
 
+.matform2{
+    width: 780px; 
+    height: 100px; 
+    margin-top: 25px;
+    margin-bottom: -15%;
+     margin-left: 90px;
+}
 
+.note3{
+    background: transparent;
+    border: none;
+    font: normal 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+     font-size: 20px;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    outline: none;
+    width: 100%; 
+    overflow: hidden;
+    height: 16px!important;
+    justify-content: start;
+    margin-top:-8%; 
+    position: relative;
+    margin-bottom:1%;
+    margin-left: 2%;
+}
+
+.note4{
+    margin-left: 1550%; 
+    margin-top: 10%; 
+    position: relative; 
+    top: -80%; 
+    left: 250%; 
+    width: 25px; 
+    height: 2px;
+    opacity: 0.54;
+}
+
+.matform3{
+    width: 780px; 
+    height: 30px;  
+    margin-top: 20px; 
+    margin-left: 90px; 
+    border: none;
 }
 
 .note2{
@@ -60,21 +153,13 @@ border: none;
 
 }
 
-.title{
-    // border:  2px solid red;
-    height: 240px;
-    display: flex;
-    position: relative;
-    top: 2%;
+.closebutton{
+    
     margin-top: -3%;
-    
-    // ::ng--deep.mat-form-field{
-    //     border-radius: 0px !important;
-    //     border: none;
-    // }
-    
-}
+    margin-bottom: -4%;
+    position: relative;
 
+}
 
 .close{
     color: rgba(0,0,0,0.87);

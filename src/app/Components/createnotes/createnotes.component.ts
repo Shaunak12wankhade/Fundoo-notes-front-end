@@ -11,7 +11,8 @@ export class CreatenotesComponent implements OnInit {
   createnotesForm!: FormGroup;
     // submitted = false;
 
-  writenote=true;
+  writenote: boolean=false;
+  
 
   constructor(  private formBuilder: FormBuilder, private note: NotesService ) { }
 
@@ -22,13 +23,15 @@ export class CreatenotesComponent implements OnInit {
 
     });
   }
-
+ 
   takeanote() {
-    this.writenote=true;
+    console.log(this.writenote);
+    return this.writenote === true ? (this.writenote = false) : (this.writenote = true);
+    // this.writenote=true;
 
   }
   onSubmit() {
-    this.writenote = true;
+    // this.writenote = true;
 
     
     if (this.createnotesForm.valid) {

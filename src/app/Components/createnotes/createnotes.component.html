@@ -5,62 +5,49 @@
 
         <div class="createnote">
             
-            <div class="takeanote" *ngIf="!writenote || writenote" (click)="takeanote()" fxLayout="column"
+
+            <div class="takeanote" *ngIf="!writenote" (click)="takeanote()" fxLayout="column"
                 fxLayoutAlign="center center">
 
-                <mat-form-field style="width: 780px; height: 0px;  margin-top: 20px; margin-left: 90px; border: none;"
-                    appearance="outline">
+                <mat-form-field class="matform1" appearance="outline">
                     <!-- <mat-icon>search</mat-icon> -->
-                    <input class="note1" type="text" matInput placeholder="Take a note...">
+                    <input class="note1" type="text" matInput placeholder="Take a note..." >
 
                     <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
-                        <img style="margin-left: 1650%; margin-bottom:-2%; position: relative; top: -35%; left: -100%; width: 25px; height: 25px; opacity: 0.54;"
-                            src="../../../assets/check_box_black_24dp.svg" alt="">
+                        <img class="checkbox" src="../../../assets/check_box_black_24dp.svg" alt="">
 
                     </button>
 
                     <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
-                        <img style="margin-left: 1500%; margin-top: -66%; position: relative; top: -1%; left: 80%; width: 25px; height: 25px; opacity: 0.54;"
-                            src="../../../assets/brush_black_24dp.svg" alt="">
+                        <img class="brush" src="../../../assets/brush_black_24dp.svg" alt="">
 
                     </button>
 
                     <button mat-icon-button class="closebutton" aria-label="Example icon-button with menu icon">
-                        <img style="margin-left: 1550%; margin-top: 45%; position: relative; top: -55%; left: 58%; width: 25px; height: 25px;opacity: 0.54;"
-                            src="../../../assets/insert_photo_black_24dp.svg" alt="">
+                        <img class="insertphoto" src="../../../assets/insert_photo_black_24dp.svg" alt="">
 
                     </button>
 
                 </mat-form-field>
 
-               
-
-
-
             </div>
+          
 
             <div class="title" *ngIf="writenote" fxLayout="column" fxLayoutAlign="center center">
 
-                <mat-form-field
-                    style=" width: 780px; height: 100px;  margin-top: 25px;margin-bottom: -15%; margin-left: 90px;"
-                    appearance="outline">
+                <mat-form-field class="matform2" appearance="outline">
                     <!-- <mat-icon>search</mat-icon> -->
-                    <input type="text" matInput
-                        style="background: transparent;border: none;font: normal 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif; font-size: 20px;
-                       -webkit-font-variant-ligatures: none;font-variant-ligatures: none;outline: none;width: 100%; overflow: hidden; height: 16px!important; justify-content: start; margin-top:-8%; position: relative; margin-bottom:1%; margin-left: 2%;"
-                        placeholder="Title" formControlName="title">
+                    <input class="note3" type="text" matInput placeholder="Title" formControlName="title">
 
 
                     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <img style="margin-left: 1550%; margin-top: 10%; position: relative; top: -80%; left: 250%; width: 25px; height: 2px;opacity: 0.54;"
-                            src="../../../assets/push_pin_black_24dp.svg" alt="">
+                        <img class="note4" src="../../../assets/push_pin_black_24dp.svg" alt="">
 
                     </button>
 
                 </mat-form-field>
 
-                <mat-form-field style="width: 780px; height: 30px;  margin-top: 20px; margin-left: 90px; border: none;"
-                    appearance="outline">
+                <mat-form-field class="matform3" appearance="outline">
 
                     <input class="note2" type="text" matInput placeholder="Take a note..." formControlName="description">
 
@@ -72,6 +59,7 @@
                 <button class="close">Close</button>
 
             </div>
+
 
             </div>
 
