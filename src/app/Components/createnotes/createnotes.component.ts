@@ -26,12 +26,12 @@ export class CreatenotesComponent implements OnInit {
  
   takeanote() {
     console.log(this.writenote);
-    return this.writenote === true ? (this.writenote = false) : (this.writenote = true);
+    return this.writenote === true ? (this.writenote = false) : (this.writenote = true);   // conditional operator is used here
     // this.writenote=true;
 
   }
   onSubmit() {
-    // this.writenote = true;
+    this.writenote = false;
 
     
     if (this.createnotesForm.valid) {
