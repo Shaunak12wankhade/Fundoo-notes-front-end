@@ -14,7 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 
 import { ForgotemailComponent } from './Components/forgotemail/forgotemail.component';
 import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassword.component';
-import { ReactiveFormsModule } from '@angular/forms';      //its a parent module for form control, form builder
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';      //its a parent module for form control, form builder
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HttpClientModule } from '@angular/common/http';    // used to connect with backend URL
@@ -31,8 +31,12 @@ import { CreatenotesComponent } from './Components/createnotes/createnotes.compo
 import { IconsComponent } from './Components/icons/icons.component';
 import { GetallnotesComponent } from './Components/getallnotes/getallnotes.component';
 import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.component';
-// import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-// import {MatCardHarness} from '@angular/material/card/testing';
+
+import {MatCardModule} from '@angular/material/card';
+import { UpdateComponent } from './Components/update/update.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -48,6 +52,7 @@ import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.co
     IconsComponent,
     GetallnotesComponent,
     DisplaynotesComponent,
+    UpdateComponent,
   
   ],
   imports: [
@@ -65,11 +70,14 @@ import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.co
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    // MatCardHarness
+    MatCardModule,
+    MatDialogModule,
+    FormsModule,
+    MatMenuModule
+    
 
     
   ],
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
