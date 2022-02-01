@@ -16,7 +16,7 @@ export class ForgotemailComponent implements OnInit {
   ngOnInit(): void {
 
     this.forgotemailForm =this.formBuilder.group({
-      phoneOrEmail:['',[Validators.required, Validators.email]]
+      phoneOrEmail:['',[Validators.required]]
     })
   }
   // convenience getter for easy access to form fields
