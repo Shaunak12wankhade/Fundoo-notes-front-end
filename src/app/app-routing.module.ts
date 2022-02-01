@@ -9,17 +9,26 @@ import { GetallnotesComponent } from './Components/getallnotes/getallnotes.compo
 import { IconsComponent } from './Components/icons/icons.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
 import { SigninComponent } from './Components/signin/signin.component';
+// import { UpdateComponent } from './Components/update/update.component';
 
 const routes: Routes = [ 
   { path:'register',component:RegistrationComponent},
   { path:'signin',component:SigninComponent},
   { path:'forgotemail',component:ForgotemailComponent},
   { path:'resetpassword/:token',component:ForgotpasswordComponent},
-  { path:'dashboard',component:DashboardComponent},
-  { path:'createnotes',component:CreatenotesComponent},
-  { path:'icons',component:IconsComponent},
-  { path:'getallnotes',component:GetallnotesComponent},
-  { path:'displaynotes',component:DisplaynotesComponent}
+  { path:'dashboard',component:DashboardComponent, 
+  
+     
+    children:[
+     { path:'', redirectTo:"/dashboard/getallnotes", pathMatch:'full' },
+     { path:'getallnotes',component:GetallnotesComponent}    // inside getallnotes we have given the selector of createnotes and display notes thats why below here we commented out the path of create notes & displaynotes
+    ]}, 
+  // { path:'update',component:UpdateComponent},
+
+
+  // { path:'createnotes',component:CreatenotesComponent},
+     { path:'icons',component:IconsComponent},
+  // { path:'displaynotes',component:DisplaynotesComponent}
 ];
 
 @NgModule({
