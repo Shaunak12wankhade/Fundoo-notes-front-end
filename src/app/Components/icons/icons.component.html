@@ -1,7 +1,7 @@
-<p>icons works!</p>
-<div class="section" fxLayout="row" fxLayoutAlign="space-evenly center">
 
-    <div class="icons" fxLayout="row" fxLayoutAlign="space-evenlycenter">
+<div class="section" fxLayout="row" fxLayoutAlign="start center" >
+
+    <div class="icons" fxLayout="row" fxLayout.xs="row" fxFlex="40" fxFlex.xs="95">
 
         <div class="iconsandbuttons">
             <button class="iconbutton1" fxLayout="row" fxLayoutAlign="space-around center">
@@ -28,14 +28,21 @@
 
         <div class="iconsandbuttons">
             <button class="iconbutton5" fxLayout="row" fxLayoutAlign="space-around center">
-                <img src="../../../assets/archive_black_24dp (1).svg" alt=""></button>
+                <img src="../../../assets/archive_black_24dp (1).svg" (click)="Archivenote()" alt="">
+            </button>
 
         </div>
 
         <div class="iconsandbuttons">
-            <button class="iconbutton6" fxLayout="row" fxLayoutAlign="space-around center">
-                <img src="../../../assets/more_vert_black_24dp.svg" alt=""></button>
-
+            <button [matMenuTriggerFor]="menu" class="iconbutton6" fxLayout="row" fxLayoutAlign="space-around center">
+                <img src="../../../assets/more_vert_black_24dp.svg" alt="" >
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <span (click)="deletenote()">Delete note</span>
+                </button>
+            </mat-menu>
+      
         </div>
 
 
@@ -56,22 +63,6 @@
 
         <button class="iconbutton" fxLayout="row" fxLayoutAlign="space-around center">
             <img src="../../../assets/notifications_black_24dp.svg" alt=""></button> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <!-- <p>Reminder:</p>

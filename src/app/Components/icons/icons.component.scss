@@ -1,26 +1,32 @@
 .section{
-    border: 1px solid gainsboro ;
+    // border: 1px solid gainsboro ;
     font-family: 'Roboto',arial,sans-serif;
-    width: 30%;
+    width: 10%;
     height: 7%;
     position: relative;
-    left: 35%;
+    left: 55%;
     top: 5%;
+    // border: 2px solid greenyellow;
     // border: none;
-    border-radius: 6px;
+    // border-radius: 6px;
 }
 .icons{
+    // border: 2px solid black;
     cursor: pointer;
-justify-content: center;
+    justify-content: center;
+    margin-left: 100%;
+
 }
 
 .iconsandbuttons{
+    // border: 2px solid yellow;
     margin-left: 10%;
     display: flex;
     position: relative;
-    right: 52%;
-    border: none;
+    // right: 52%;
+    // border: none;
     opacity: 0.6;
+    background-color: white;
 }
 
 .iconbutton1{
@@ -28,59 +34,37 @@ justify-content: center;
     justify-content: space-around;
     border: none;
     // border-radius: 50px;
+    background-color: white;
   
 }
 
 .iconbutton2{
     cursor: pointer;
     border: none;
+    background-color: white;
 }
 .iconbutton3{
     cursor: pointer;
     border: none;
+    background-color: white;
 }
 
 .iconbutton4{
     cursor: pointer;
     border: none;
+    background-color: white;
 
 }
 .iconbutton5{
     cursor: pointer;
     border: none;
+    background-color: white;
 
 }
 
 .iconbutton6{
     cursor: pointer;
     border: none;
+    background-color: white;
 
 }
-
-
-
-
-
-
-
-// .reminder{
-//     // border: 2px solid red;
-//     width: 60%;
-//     height: auto;
-//     margin-right: 67%;
-  
-
-// }
-
-// p{
-//     // border: 2px solid black;
-//     margin-right: 15%;
-//     font-family: 'Roboto',arial,sans-serif;
-    
-// }
-
-// .example-icon{
-//     // border: 2px solid green;
-//     margin-right: 25%;
-//     opacity: 0.6;
-// }
