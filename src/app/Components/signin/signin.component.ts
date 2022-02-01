@@ -51,10 +51,11 @@ export class SigninComponent implements OnInit {
         }
          this.user.userSignin(signinobject).subscribe((response:any)=> {
            console.log(response);
-           localStorage.setItem('token', response.id)
+
+           localStorage.setItem('token', response.id)  // we are setting this token here so that we can acces this token for all the notes components and operations after we signin. 
          })
   
-      }else{
+      } else{
         console.log("enter data");
       }
 
