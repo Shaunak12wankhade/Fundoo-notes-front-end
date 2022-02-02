@@ -32,8 +32,6 @@ export class DisplaynotesComponent implements OnInit {
       // console.log('The dialog was closed');
       this.title=result;
       this.description=result;
-      // this.animal = result;
-
       
     });
 

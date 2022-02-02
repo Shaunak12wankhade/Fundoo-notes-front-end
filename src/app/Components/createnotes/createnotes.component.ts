@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotesService } from 'src/app/services/notesservice/notes.service';
+
 
 @Component({
   selector: 'app-createnotes',
@@ -8,6 +9,9 @@ import { NotesService } from 'src/app/services/notesservice/notes.service';
   styleUrls: ['./createnotes.component.scss']
 })
 export class CreatenotesComponent implements OnInit {
+
+  @Output() autorefreshEvent = new EventEmitter<string>();  //this is child-parent datasharing & is coming from getallnotes.html, we've to import EventEmitter in the imports above 
+
   createnotesForm!: FormGroup;
     // submitted = false;
 
@@ -26,7 +30,7 @@ export class CreatenotesComponent implements OnInit {
  
   takeanote() {
     console.log(this.writenote);
-    return this.writenote === true ? (this.writenote = false) : (this.writenote = true);   // conditional operator is used here
+    return this.writenote === true ? (this.writenote = false) : (this.writenote = true);   // turnary operator is used here
     // this.writenote=true;
 
   }
@@ -43,6 +47,8 @@ export class CreatenotesComponent implements OnInit {
         }
         this.note.usercreatenotes(createnote).subscribe((response:any) => {
           console.log(response);
+
+          this.autorefreshEvent.emit(response)  //child-parent data sharing & is coming from 
         })
 
     } else{

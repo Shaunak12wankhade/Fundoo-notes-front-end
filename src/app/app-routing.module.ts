@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ArchivenotesComponent } from './Components/archivenotes/archivenotes.component';
 import { CreatenotesComponent } from './Components/createnotes/createnotes.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.component';
@@ -9,6 +10,7 @@ import { GetallnotesComponent } from './Components/getallnotes/getallnotes.compo
 import { IconsComponent } from './Components/icons/icons.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
 import { SigninComponent } from './Components/signin/signin.component';
+import { TrashnotesComponent } from './Components/trashnotes/trashnotes.component';
 // import { UpdateComponent } from './Components/update/update.component';
 
 const routes: Routes = [ 
@@ -21,14 +23,12 @@ const routes: Routes = [
      
     children:[
      { path:'', redirectTo:"/dashboard/getallnotes", pathMatch:'full' },
-     { path:'getallnotes',component:GetallnotesComponent}    // inside getallnotes we have given the selector of createnotes and display notes thats why below here we commented out the path of create notes & displaynotes
+     { path:'getallnotes',component:GetallnotesComponent},   // inside getallnotes we have given the selector of createnotes and display notes thats why below here we commented out the path of create notes & displaynotes 
+     { path:'trash',component:TrashnotesComponent},
+     { path:'archiveNotes',component:ArchivenotesComponent},   
     ]}, 
-  // { path:'update',component:UpdateComponent},
-
-
-  // { path:'createnotes',component:CreatenotesComponent},
-     { path:'icons',component:IconsComponent},
-  // { path:'displaynotes',component:DisplaynotesComponent}
+  //{ path:'update',component:UpdateComponent},
+    { path:'icons',component:IconsComponent},
 ];
 
 @NgModule({

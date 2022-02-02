@@ -49,7 +49,7 @@
           <img class="appbutton" src="../../../assets/apps_black_24dp.svg" alt="">
         </button>
 
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">  <!--here use avatar tag to display our image or starting letter of name-->
           <img class="accountbutton" src="../../../assets/account_circle_black_24dp.svg" alt="">
         </button>
 
@@ -57,57 +57,57 @@
       </div>
 
     </mat-toolbar>
-    <!-- </p> -->
-    <!-- <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun"> -->
 
-    <!-- <mat-toolbar color="primary" class="example-toolbar">
-              <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-              <h1 class="example-app-name">Responsive App</h1>
-         </mat-toolbar> -->
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav mode="side" id="sidenav" [class.menu-open]="!isMenuOpen" [class.menu-close]="isMenuOpen" opened #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+          <div class="container">
+              <mat-nav-list>
+                  <div class="iconsandlist">
+                      <button mat-button class="sidenav-button" (click)="notes()">
+                          <img class="sidenav-img" src="../../../assets/lightbulb_black_24dp.svg" alt="">
+                          Notes
+                      </button>
+                  </div>
+                  <div class="iconsandlist">
+                      <button mat-button class="sidenav-button">                          
+                          <img class="sidenav-img" src="../../../assets/notifications_black_24dp.svg" alt="">
+                          Reminders
+                      </button>
+                  </div>
+                  <div class="iconsandlist">
+                      <button mat-button class="sidenav-button" >
+                          <img class="sidenav-img" src="../../../assets/mode_black_24dp.svg" alt="">
+                          Edit labels
+                      </button>
+                  </div>
+                  <div class="iconsandlist">
+                      <button mat-button class="sidenav-button"(click)="Archive()">
+                          <img class="sidenav-img" src="../../../assets/archive_black_24dp.svg" alt="">
+                          Archives
+                      </button>
+                  </div>
+                  <div class="iconsandlist">
+                      <button mat-button class="sidenav-button" (click)="Trash()">
+                          <img class="sidenav-img" src="../../../assets/delete_black_24dp.svg" alt="">
+                          Trash
+                      </button>
+                  </div>
+               
 
-    <mat-sidenav-container style=" height: 88vh; border: none;">
-
-      <mat-sidenav   mode="side" id="sidenav" [class.menu-open]="!isMenuOpen" [class.menu-close]="!isMenuOpen" opened>
-       
-        <!-- <mat-sidenav #sidenav style="width: 240px;" mode="side" [opened]="false"> -->
-        <div class="container">
-          <mat-nav-list>
-            <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
-            
-            <div class="iconsandlists" fxLayout="column" fxLayoutAlign="start center">
-
-              <button class="lightbulb" *ngIf="true" fxLayout="row" fxLayoutAlign="space-around center">
-                <img class="bulb" src="../../../assets/lightbulb_black_24dp.svg" alt="">Notes</button>
-              <!-- <p class="para1">Notes</p> -->
-
-
-              <button class="lightbulb" fxLayout="row" fxLayoutAlign="space-around center">
-                <img class="reminder" src="../../../assets/notifications_black_24dp.svg" alt="">Reminders</button>
-              <!-- <p class="para2">Reminders</p> -->
-
-              <button class="lightbulb" fxLayout="row" fxLayoutAlign="space-around center">
-                <img class="label" src="../../../assets/mode_black_24dp.svg" alt="">Edit labels</button>
-              <!-- <p class="para3">Editlabels</p> -->
-
-              <button class="lightbulb" fxLayout="row" fxLayoutAlign="space-around center">
-                <img class="archive" src="../../../assets/archive_black_24dp.svg" alt="">Archives</button>
-              <!-- <p class="para4">Archives</p> -->
-
-              <button class="lightbulb" fxLayout="row" fxLayoutAlign="space-around center">
-                <img class="trash" src="../../../assets/delete_black_24dp.svg" alt="">Trash</button>
-              <!-- <p class="para5">Trash</p> -->
-
-            </div>
-
-          </mat-nav-list>
-        </div>
+              </mat-nav-list>
+          </div>
       </mat-sidenav>
+
+
+
 
       <mat-sidenav-content>
 
         <router-outlet></router-outlet>
 
       </mat-sidenav-content>
+      
     </mat-sidenav-container>
     <!-- </div> -->
 

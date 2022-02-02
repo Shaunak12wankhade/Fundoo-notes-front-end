@@ -9,6 +9,7 @@ import { NotesService } from 'src/app/services/notesservice/notes.service';
 export class IconsComponent implements OnInit {
 
   @Input() notecard:any;
+  dataservice: any;
  
   constructor(private note: NotesService) { }
 
@@ -19,13 +20,15 @@ export class IconsComponent implements OnInit {
 
     let reqdata= {
       
-      noteIdlist: [this.notecard.id],  //this notecard is coming from display.html - <app-icons & this noteIdlist is taken as a assumption by ourselves for taking id of notes
+      noteIdList: [this.notecard.id],  //this notecard is coming from display.html - <app-icons & this noteIdlist is taken as a assumption by ourselves for taking id of notes
       isDeleted: true,  // it is coming from backend 
     }
     this.note.userdeletenotes(reqdata).subscribe((response:any) =>{
       console.log("Note is deleted");
       
       console.log(response)
+
+      this.dataservice.sendData(response)  // this is coming from data service.ts used for unrelated data sharing
     })
   }
   
@@ -33,7 +36,7 @@ export class IconsComponent implements OnInit {
 
     let reqdata={
       
-      noteIdlist: [this.notecard.id],
+      noteIdList: [this.notecard.id],
       isArchived:true,  // it is coming from backend api
     }
     this.note.userarchivenotes(reqdata).subscribe((response:any) =>{

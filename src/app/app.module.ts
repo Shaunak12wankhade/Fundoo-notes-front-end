@@ -37,6 +37,8 @@ import { UpdateComponent } from './Components/update/update.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 import {MatMenuModule} from '@angular/material/menu';
+import { TrashnotesComponent } from './Components/trashnotes/trashnotes.component';
+import { ArchivenotesComponent } from './Components/archivenotes/archivenotes.component';
 
 
 
@@ -53,6 +55,8 @@ import {MatMenuModule} from '@angular/material/menu';
     GetallnotesComponent,
     DisplaynotesComponent,
     UpdateComponent,
+    TrashnotesComponent,
+    ArchivenotesComponent,
   
   ],
   imports: [

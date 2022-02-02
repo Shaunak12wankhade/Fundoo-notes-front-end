@@ -13,7 +13,7 @@ export class UpdateComponent implements OnInit {
 
   constructor( private note: NotesService,
     public dialogRef: MatDialogRef<UpdateComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,   // this data
+    @Inject(MAT_DIALOG_DATA) public data: any,   // this data is coming from display notes.ts as we are injecting here from display.ts
   ) {}
 
   onNoClick(): void {
@@ -22,7 +22,8 @@ export class UpdateComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.data);
-
+     
+    // this right side title and description is coming from display.html file
     this.title=this.data.title,
     this.description=this.data.description
     

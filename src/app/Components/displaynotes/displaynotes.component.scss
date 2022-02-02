@@ -9,11 +9,10 @@
 }
 
 .example-card {
-    max-width: 1000px;
+    max-width: 2000px;
     // border: 2px solid red;
     border: 1px solid gainsboro ;
     height: auto;
-    // width: auto;
     // margin-top: 15%;
     // margin-left: 5%;
     border-radius: 15px;
@@ -46,10 +45,13 @@
 
   }
 
-  .mat-card-content{
+  .matcardicons{
       // border: 2px solid red;
+      height: 32%;
+      width: 100%;
       margin-top: 23%;
-      // margin-left: -6%;
-      margin-right: 35%;
+      margin-left: -18%;
+      // margin-right: 55%;
       overflow: visible;
+      // justify-content: space-between;
   }
