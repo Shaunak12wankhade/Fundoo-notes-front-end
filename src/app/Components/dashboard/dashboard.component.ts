@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
 
-    // this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   onToolbarMenuToggle(){
@@ -48,6 +48,11 @@ export class DashboardComponent implements OnInit {
   }
   Trash(){
     this.route.navigateByUrl('dashboard/trash')
+  }
+
+  Logout(){
+    localStorage.removeItem('token');
+    this.route.navigateByUrl('/signin')
   }
 
 

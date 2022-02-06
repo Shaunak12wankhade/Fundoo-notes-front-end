@@ -15,6 +15,7 @@
     cursor: pointer;
     justify-content: center;
     margin-left: 100%;
+    // display: block;
 
 }
 
@@ -26,45 +27,80 @@
     // right: 52%;
     // border: none;
     opacity: 0.6;
-    background-color: white;
+    // background-color: white;
+    // display: none;
 }
 
 .iconbutton1{
     cursor: pointer;
     justify-content: space-around;
     border: none;
+    background: none;
     // border-radius: 50px;
-    background-color: white;
+    // background-color: white;
   
 }
 
 .iconbutton2{
     cursor: pointer;
     border: none;
-    background-color: white;
+    background: none;
+    // background-color: white;
 }
 .iconbutton3{
     cursor: pointer;
     border: none;
-    background-color: white;
+    background: none;
+    // background-color: white;
 }
 
 .iconbutton4{
     cursor: pointer;
     border: none;
-    background-color: white;
+    background: none;
+    // background-color: white;
 
 }
 .iconbutton5{
     cursor: pointer;
     border: none;
-    background-color: white;
+    background: none;
+    // background-color: white;
 
 }
 
 .iconbutton6{
     cursor: pointer;
     border: none;
-    background-color: white;
+    background: none;
+    // background-color: white;
 
 }
+
+
+
+.trashIcons{
+    // border: 5px solid transparent;
+    // border: 2px solid red;
+    height: auto;
+    width: auto;
+    // top: 20px;
+    display: flex;
+      align-items: center;
+    background-color: transparent;
+    margin-left: -105px;
+   
+    justify-content: space-between;
+    opacity: 0.54;
+    // padding-left: -5%;
+  }
+//   .ArchiveNotesIcon{
+//     border: 5px solid transparent;
+//       height: 20px;
+//       width: 50%;
+//       top: 20px;
+//       display: flex;
+//       align-items: center;
+//       background-color: transparent;
+//       margin-left: -5%;
+//   }

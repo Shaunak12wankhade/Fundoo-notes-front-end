@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/userservice/user.service';
 
 @Component({
@@ -11,7 +12,8 @@ export class SigninComponent implements OnInit {
 
   signinForm!: FormGroup;
   submitted = false;
-  constructor( private formBuilder: FormBuilder, private user:UserService) { }
+  
+  constructor( private formBuilder: FormBuilder, private user:UserService, private route: Router) { }
 
   ngOnInit(): void {
 
@@ -53,7 +55,11 @@ export class SigninComponent implements OnInit {
            console.log(response);
 
            localStorage.setItem('token', response.id)  // we are setting this token here so that we can acces this token for all the notes components and operations after we signin. 
-         })
+          //  if(response.success == true)
+          //  {
+          //    this.route.navigateByUrl('dashboard/getallnotes')
+          //  }
+          })
   
       } else{
         console.log("enter data");

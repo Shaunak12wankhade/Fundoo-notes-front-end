@@ -1,12 +1,12 @@
-<div class="section" fxLayout="row wrap" fxLayoutGap="15px grid" fxLayoutAlign="start center">
+<div  fxLayout="row wrap" fxLayoutGap="20px grid" style="padding-left: 10%; padding-top: 5%;" >
 
-   <div fxFlex=25% fxFlex.xs=100%  *ngFor="let note1 of notesArraylist;"   > 
+   <div *ngFor="let note1 of notesArraylist;"   > 
      
-    <mat-card class="example-card">
+    <mat-card class="example-card" [style.background]="note1.color" >  <!--this .color is coming from backend and is used -->
       <!-- <mat-card-header> -->
         <mat-card-title (click)="openDialog(note1)" >
           <!-- title -->
-          {{note1.title }} <!-- string interpolation is used here which shows us data in string -->
+          {{note1.title }} <!-- string interpolation is used here which shows us data in string in browser -->
           
 
           <button class="pinbutton" >
@@ -25,7 +25,7 @@
       <!-- </mat-card-header> -->
       
       <mat-card-content class="matcardicons">
-          <app-icons [notecard]="note1" ></app-icons>    <!--this is child of displaynotes-->
+          <app-icons [notecard]="note1" (changeColorOfNote)="messageReceivedFromNote($event)" ></app-icons>    <!--this is used for data sharing between icons and displaynotes & is child of displaynotes-->
       </mat-card-content>
 
       <mat-card-actions>

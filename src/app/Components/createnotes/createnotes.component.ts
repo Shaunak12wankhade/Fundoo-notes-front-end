@@ -48,7 +48,7 @@ export class CreatenotesComponent implements OnInit {
         this.note.usercreatenotes(createnote).subscribe((response:any) => {
           console.log(response);
 
-          this.autorefreshEvent.emit(response)  //child-parent data sharing & is coming from 
+          this.autorefreshEvent.emit(response)  //child-parent data sharing between getallnotes and create notes & is coming from getallnotes.html
         })
 
     } else{

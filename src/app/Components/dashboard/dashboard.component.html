@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section" [class.section]="mobileQuery.matches" >
   <div class="form">
     <mat-toolbar>
 
@@ -49,7 +49,7 @@
           <img class="appbutton" src="../../../assets/apps_black_24dp.svg" alt="">
         </button>
 
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">  <!--here use avatar tag to display our image or starting letter of name-->
+        <button (click)="Logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">  <!--here use avatar tag to display our image or starting letter of name-->
           <img class="accountbutton" src="../../../assets/account_circle_black_24dp.svg" alt="">
         </button>
 

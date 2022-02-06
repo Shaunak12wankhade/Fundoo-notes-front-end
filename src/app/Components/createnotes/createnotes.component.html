@@ -53,7 +53,7 @@
                 <!-- </mat-form-field> -->
 
                 <div class="closebutton1" fxLayout="row" fxLayoutAlign="space-between center">
-                    <app-icons></app-icons>
+                    <app-icons [notecard]="{isDeleted:false,isArchived:false}" ></app-icons>   <!--we are doinf this for restore and permanant delete-->
                     <!-- <button class="close" (click)="onSubmit()" >Close</button> -->
 
                     <button style="margin-left: 65%;" (click)="onSubmit()" mat-stroked-button>close</button>

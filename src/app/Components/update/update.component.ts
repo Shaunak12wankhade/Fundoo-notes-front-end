@@ -42,6 +42,7 @@ export class UpdateComponent implements OnInit {
       console.log(response)
     })
     this.dialogRef.close()   //this will close our update note card after clicking on close button
+    window.location.reload();
   }
 
 }

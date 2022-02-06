@@ -68,7 +68,7 @@ export class NotesService {
    }
 
    
-   usergettrashnoteslist(){
+   usergettrashnoteslist(){  // for getmethod we are not sending any data to the backend thats why we are not taking data:any inside method 
      
     let header= {
       headers: new HttpHeaders({
@@ -77,5 +77,40 @@ export class NotesService {
       })
     }
    return this.httpService.getService('notes/getTrashNotesList',true,header )
+   }
+
+    
+   usergetarchivenoteslist(){
+     
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':this.token
+      })
+    }
+   return this.httpService.getService('notes/getArchiveNotesList',true,header )
+   }
+
+   usercolor(data:any){   // for postmethod we are sending data to the backend thats why we are taking data:any inside method
+     
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':this.token
+      })
+    }
+    return this.httpService.postService('notes/changesColorNotes',data,true,header)
+   }
+
+   userpermanentdelete(data:any){
+     
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':this.token
+      })
+    }
+    return this.httpService.postService('notes/deleteForeverNotes',data,true,header)
+
    }
 }

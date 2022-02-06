@@ -34,7 +34,10 @@ export class DisplaynotesComponent implements OnInit {
       this.description=result;
       
     });
-
+    
+  }
+  messageReceivedFromNote(e:any){  // this is used for data sharing between icons(child) and displaynotes(parent)
+    console.log(e);
     
   }
 
