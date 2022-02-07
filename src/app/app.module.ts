@@ -39,6 +39,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import { TrashnotesComponent } from './Components/trashnotes/trashnotes.component';
 import { ArchivenotesComponent } from './Components/archivenotes/archivenotes.component';
+import { SearchnotePipe } from './pipe/searchnote.pipe';
+
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
@@ -57,6 +60,7 @@ import { ArchivenotesComponent } from './Components/archivenotes/archivenotes.co
     UpdateComponent,
     TrashnotesComponent,
     ArchivenotesComponent,
+    SearchnotePipe,
   
   ],
   imports: [
@@ -77,7 +81,8 @@ import { ArchivenotesComponent } from './Components/archivenotes/archivenotes.co
     MatCardModule,
     MatDialogModule,
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDatepickerModule
     
 
     

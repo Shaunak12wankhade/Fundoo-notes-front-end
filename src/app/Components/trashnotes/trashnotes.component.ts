@@ -9,7 +9,7 @@ import { NotesService } from 'src/app/services/notesservice/notes.service';
 })
 export class TrashnotesComponent implements OnInit {
   trashNotes:any;
-  localnotes:any;
+  localnotes:any;  // variable declared/used for storing purpose only 
   
   constructor(private note: NotesService , private dataservice:DataService) { }
 

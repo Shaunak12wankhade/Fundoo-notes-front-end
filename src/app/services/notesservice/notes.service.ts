@@ -113,4 +113,15 @@ export class NotesService {
     return this.httpService.postService('notes/deleteForeverNotes',data,true,header)
 
    }
+
+   useraddreminder(data:any){
+      
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':this.token
+      })
+    }
+    return this.httpService.postService('notes/addUpdateReminderNotes',data,true,header)
+   }
 }

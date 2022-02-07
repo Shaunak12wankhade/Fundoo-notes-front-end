@@ -58,7 +58,7 @@ export class IconsComponent implements OnInit {
 
       this.dataservice.sendData(response)  // this is coming from data service.ts used for unrelated data sharing as our icons.ts and getall notes dont have any relationship
     })
-    // window.location.reload();
+    window.location.reload();
   }
   
   Archivenote(){
@@ -75,8 +75,27 @@ export class IconsComponent implements OnInit {
       
       this.dataservice.sendData(response)  // this is coming from data service.ts used for unrelated data sharing as our icons.ts and getall notes dont have any relationship
     })
-    // window.location.reload();
+    window.location.reload();
   }
+
+  Unarchive(){
+     
+    let reqdata={
+      
+      noteIdList: [this.notecard.id],
+      isArchived:false,  // it is coming from backend api
+    }
+    this.note.userarchivenotes(reqdata).subscribe((response:any) =>{
+      console.log("Note is Unarchived");
+
+      console.log(response);
+      
+      this.dataservice.sendData(response)  // this is coming from data service.ts used for unrelated data sharing as our icons.ts and getall notes dont have any relationship
+    })
+    window.location.reload();
+  }
+
+  
 
   changeColor(noteColor:any){
     
@@ -111,22 +130,39 @@ export class IconsComponent implements OnInit {
 
       this.dataservice.sendData(response)  // this is coming from data service.ts used for unrelated data sharing as our icons.ts and getall notes dont have any relationship
     })
+    window.location.reload();
+  }
+  
+  restorenote(){
+    let reqdata= {
+      
+      noteIdList: [this.notecard.id],  //this notecard is coming from display.html - <app-icons & this noteIdlist is taken as a assumption by ourselves for taking id of notes
+      isDeleted: false,  // it is coming from backend 
+    }
+    this.note.userdeletenotes(reqdata).subscribe((response:any) =>{
+      console.log("Note is restored");
+      
+      console.log(response)
+
+      this.dataservice.sendData(response)  // this is coming from data service.ts used for unrelated data sharing as our icons.ts and getall notes dont have any relationship
+    })
     // window.location.reload();
   }
 
-  // restorenote(){
-  //   let reqdata= {
+  reminder(){
+    let reqdata= {
       
-  //     noteIdList: [this.notecard.id],  //this notecard is coming from display.html - <app-icons & this noteIdlist is taken as a assumption by ourselves for taking id of notes
-  //     isDeleted: true,  // it is coming from backend 
-  //   }
-  //   this.note.userdeletenotes(reqdata).subscribe((response:any) =>{
-  //     console.log("Note is restored");
+      noteIdList: [this.notecard.id],  //this notecard is coming from display.html - <app-icons & this noteIdlist is taken as a assumption by ourselves for taking id of notes
+      reminder: "string",  // it is coming from backend 
+    }
+    this.note.useraddreminder(reqdata).subscribe((response:any) =>{
+      console.log("reminder is added");
       
-  //     console.log(response)
+      console.log(response)
 
-  //     this.dataservice.sendData(response)  // this is coming from data service.ts used for unrelated data sharing as our icons.ts and getall notes dont have any relationship
-  //   })
-  //   // window.location.reload();
-  // }
+      
+    })
+  }
 }
+
+
