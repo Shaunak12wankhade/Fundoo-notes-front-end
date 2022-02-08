@@ -8,27 +8,44 @@
                 fxLayoutAlign="space-around center">
                 <img src="../../../assets/add_alert_black_24dp.svg" alt="">
 
-           
-
-            <mat-menu #reminderMenu="matMenu" style="width: 50px;">
-                <p>Reminder: </p>
-                <!--<button mat-menu-item>
+                <mat-menu #reminderMenu="matMenu" style="width: 50px;">
+                    <p>Reminder: </p>
+                    <!--<button mat-menu-item>
                     <span (click)="deletenote()">Delete note</span>
                 </button> -->
-                <button mat-menu-item>Later today
-                </button>
-                <button mat-menu-item>Tomorrow
-                </button>
-                <button mat-menu-item>Next week
-                </button>
-                <button mat-menu-item>Home
-                </button>
-                <button mat-menu-item [matMenuTriggerFor]="dateMenu" >
-                    <img style="width: 20px; height: 20px; justify-content: space-evenly;"
-                        src="../../../assets/schedule_black_24dp.svg" alt="">Pick date & time
+                    <button mat-menu-item>Later today
+                    </button>
+                    <button mat-menu-item>Tomorrow
+                    </button>
+                    <button mat-menu-item>Next week
+                    </button>
+                    <button mat-menu-item>Home
+                    </button>
+                    <button [matMenuTriggerFor]="dateMenu"  mat-menu-item >
+                        <img style="position: relative; top: 2px;width: 16px; height: 16px; justify-content: space-evenly;"
+                            src="../../../assets/schedule_black_24dp.svg" alt="">Pick date & time
 
-                </button>
-                <!-- <mat-menu #dateMenu="matMenu">
+                    </button>
+                    <mat-menu #dateMenu="matMenu">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker">
+                            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                   </mat-menu>
+
+                    <button mat-menu-item>
+                        <img style=" position: relative; top: 3px;width: 16px; height: 16px; justify-content: space-evenly;"
+                            src="../../../assets/place_black_24dp.svg" alt="">Pick place
+                    </button>
+
+           
+                </mat-menu>
+            <!--  
+                <mat-menu #dateMenu="matMenu">
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Choose a date</mat-label>
                         <input matInput [matDatepicker]="picker">
@@ -39,34 +56,10 @@
                     </mat-form-field>
                 </mat-menu> -->
 
-                <button mat-menu-item>
-                    <img style="width: 20px; height: 20px; justify-content: space-evenly;"
-                        src="../../../assets/place_black_24dp.svg" alt="">Pick place
-                </button>
 
-            </mat-menu>
 
-             <mat-menu #dateMenu="matMenu">
-                <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label>Choose a date</mat-label>
-                    <input matInput [matDatepicker]="picker">
-                    <mat-datepicker-toggle matSuffix [for]="picker">
-                      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-                    </mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
-                  </mat-form-field>
-            </mat-menu> 
-
-          
-
-       </button>
+            </button>
         </div>
-
-
-
-
-
-
 
         <div class="iconsandbuttons">
             <button class="iconbutton2" fxLayout="row" fxLayoutAlign="space-around center">
@@ -149,44 +142,3 @@
 
 
 </div>
-
-
-
-
-<!-- <button class="iconbutton3" fxLayout="row" fxLayoutAlign="space-around center">
-            <img src="../../../assets/notifications_black_24dp.svg" alt=""></button>
-
-        <button class="iconbutton" fxLayout="row" fxLayoutAlign="space-around center">
-            <img src="../../../assets/notifications_black_24dp.svg" alt=""></button>
-
-        <button class="iconbutton" fxLayout="row" fxLayoutAlign="space-around center">
-            <img src="../../../assets/notifications_black_24dp.svg" alt=""></button>
-
-        <button class="iconbutton" fxLayout="row" fxLayoutAlign="space-around center">
-            <img src="../../../assets/notifications_black_24dp.svg" alt=""></button> -->
-
-
-<!-- <p>Reminder:</p>
-
-        <button mat-icon-button class="example-icon"  aria-label="Example icon-button with menu icon">
-            Later today </button>
-    
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            Tomorrow </button>
-    
-    
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            Next week </button>
-    
-    
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            Home </button>
-    
-    
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <img style="width: 20px; height: 20px; justify-content: space-evenly;" src="../../../assets/schedule_black_24dp.svg" alt="">Pick date & time </button>
-    
-    
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <img style="width: 20px; height: 20px; justify-content: space-evenly;" src="../../../assets/place_black_24dp.svg" alt="">
-            Pick place </button> -->

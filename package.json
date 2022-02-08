@@ -1,11 +1,13 @@
 {
   "name": "fundonotes",
   "version": "0.0.0",
+  "engines": { "node": "v16.13.0", "npm": "8.1.0" },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "heroku-postbuild": "ng build — prod",
     "test": "ng test"
   },
   "private": true,
@@ -21,6 +23,8 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "express": "^4.17.2",
+    "path": "^0.12.7",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

@@ -42,6 +42,8 @@ import { ArchivenotesComponent } from './Components/archivenotes/archivenotes.co
 import { SearchnotePipe } from './pipe/searchnote.pipe';
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core'
+// import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 
 
@@ -82,7 +84,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatDialogModule,
     FormsModule,
     MatMenuModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule,
+    // MatMomentDateModule
     
 
     
