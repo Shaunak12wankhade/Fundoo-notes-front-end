@@ -49,6 +49,9 @@ export class DashboardComponent implements OnInit {
   Trash(){
     this.route.navigateByUrl('dashboard/trash')
   }
+  Reminder(){
+    this.route.navigateByUrl('dashboard/reminderNotes')
+  }
 
   Logout(){
     localStorage.removeItem('token');

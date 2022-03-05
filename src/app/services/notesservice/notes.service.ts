@@ -124,4 +124,16 @@ export class NotesService {
     }
     return this.httpService.postService('notes/addUpdateReminderNotes',data,true,header)
    }
+
+   usergetallreminder(){
+
+      
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':this.token
+      })
+    }
+   return this.httpService.getService('notes/getReminderNotesList',true,header )
+   }
 }

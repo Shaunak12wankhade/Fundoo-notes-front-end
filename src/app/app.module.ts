@@ -41,10 +41,10 @@ import { TrashnotesComponent } from './Components/trashnotes/trashnotes.componen
 import { ArchivenotesComponent } from './Components/archivenotes/archivenotes.component';
 import { SearchnotePipe } from './pipe/searchnote.pipe';
 
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core'
+import {MatDatepickerModule} from '@angular/material/datepicker';  // used for reminder pick date and time 
+import {MatNativeDateModule} from '@angular/material/core'         // used for reminder pick date and time 
 // import { MatMomentDateModule } from "@angular/material-moment-adapter";
-
+import { RemindernotesComponent } from './Components/remindernotes/remindernotes.component'
 
 
 @NgModule({
@@ -63,6 +63,7 @@ import {MatNativeDateModule} from '@angular/material/core'
     TrashnotesComponent,
     ArchivenotesComponent,
     SearchnotePipe,
+    RemindernotesComponent,
   
   ],
   imports: [

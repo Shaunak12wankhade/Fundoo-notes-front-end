@@ -6,7 +6,7 @@
       <!-- <mat-card-header> -->
         <mat-card-title (click)="openDialog(note1)" >
           <!-- title -->
-          {{note1.title }} <!-- string interpolation is used here which shows us data in string in browser -->
+          {{note1.title }} <!-- .title is coming from backend api & string interpolation is used here which shows us data in string in browser -->
           
 
           <button class="pinbutton" >
@@ -19,7 +19,7 @@
 
         <mat-card-subtitle (click)="openDialog(note1)" >
           <!-- description -->
-          {{ note1.description }}
+          {{ note1.description }}  <!-- .description is coming from backend api-->
         </mat-card-subtitle>
         
       <!-- </mat-card-header> -->

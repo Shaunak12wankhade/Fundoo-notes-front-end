@@ -162,6 +162,7 @@ export class IconsComponent implements OnInit {
 
       
     })
+    window.location.reload();
   }
 }
 

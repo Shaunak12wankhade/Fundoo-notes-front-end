@@ -5,36 +5,36 @@ import { HttpHeaders } from '@angular/common/http';  //
   providedIn: 'root'
 })
 export class UserService {
-  token:any
-  constructor( private httpService: HttpService ) {
-    this.token=localStorage.getItem("token")
-   }
+  token: any
+  constructor(private httpService: HttpService) {
+    this.token = localStorage.getItem("token")
+  }
 
-  userRegister( data:any){
-    let header={
-      headers:new HttpHeaders({    //
+  userRegister(data: any) {
+    let header = {
+      headers: new HttpHeaders({    //
         'Content-Type': 'application/json'  //request and response are in the format of json means key-value pair
       })
     }
-    return this.httpService.postService('user/userSignUp',data, false, header)
+    return this.httpService.postService('user/userSignUp', data, false, header)
   }
 
-  userSignin( data:any){
-    let header={
-      headers:new HttpHeaders({
+  userSignin(data: any) {
+    let header = {
+      headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     }
-    return this.httpService.postService('user/login', data, false, header )
+    return this.httpService.postService('user/login', data, false, header)
   }
 
-  userforgotemail( data:any){
-    let header={
-      headers:new HttpHeaders({
+  userforgotemail(data: any) {
+    let header = {
+      headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     }
-   return this.httpService.postService('user/reset', data, false, header )
+    return this.httpService.postService('user/reset', data, false, header)
   }
   encode(data: any) {
     const formBody = [];
@@ -57,18 +57,17 @@ export class UserService {
 
   //     return  this.httpService.postService('user/reset-password' , this.encode(data), true, header )
 
-      
+
   // }
-  forgetpassword(payload:any,token:any)
-{
-  console.log("user password ======token" ,token);
-     
+  forgetpassword(payload: any, token: any) {
+    console.log("user password ======token", token);
+
     let header = {
       headers: new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
-       'Authorization':token
+        'Authorization': token
       })
-   }
-   return this.httpService.postService("user/reset-password", this.encode(payload), true, header)
-}
+    }
+    return this.httpService.postService("user/reset-password", this.encode(payload), true, header)
+  }
 }
