@@ -1,17 +1,15 @@
-<div class="section" [class.section]="mobileQuery.matches" >
+<div class="section" [class.section]="mobileQuery.matches">
   <div class="form">
     <mat-toolbar>
 
       <div class="menubutton">
         <button mat-icon-button (click)="onToolbarMenuToggle()" class="example-icon"
           aria-label="Example icon-button with menu icon">
-          <mat-icon >menu</mat-icon>
+          <mat-icon>menu</mat-icon>
         </button>
-
         <!-- <button>
           <mat-icon (click)="sidenav.toggle();" style="color: grey; cursor: pointer;">menu</mat-icon>
         </button> -->
-
       </div>
 
       <!-- <div class="keepimageandbutton"> -->
@@ -28,7 +26,7 @@
           <!-- <img
             style="opacity: 0.54; width: 30px; height: 30px; background-color: white; margin-top: 20%; position: relative; top: -10%;"
             src="../../../assets/search_black_24dp.svg" alt=""> -->
-          <input matInput placeholder="Search" >
+          <input matInput placeholder="Search">
         </mat-form-field>
       </div>
 
@@ -49,69 +47,61 @@
           <img class="appbutton" src="../../../assets/apps_black_24dp.svg" alt="">
         </button>
 
-        <button (click)="Logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">  <!--here use avatar tag to display our image or starting letter of name-->
+        <button (click)="Logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <!--here use avatar tag to display our image or starting letter of name-->
           <img class="accountbutton" src="../../../assets/account_circle_black_24dp.svg" alt="">
         </button>
 
-
       </div>
-
     </mat-toolbar>
 
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-      <mat-sidenav mode="side" id="sidenav" [class.menu-open]="!isMenuOpen" [class.menu-close]="isMenuOpen" opened #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
-      fixedTopGap="56">
-          <div class="container">
-              <mat-nav-list>
-                  <div class="iconsandlist">
-                      <button mat-button class="sidenav-button" (click)="notes()">
-                          <img class="sidenav-img" src="../../../assets/lightbulb_black_24dp.svg" alt="">
-                          Notes
-                      </button>
-                  </div>
-                  <div class="iconsandlist">
-                      <button mat-button class="sidenav-button" (click)="Reminder()">                          
-                          <img class="sidenav-img" src="../../../assets/notifications_black_24dp.svg" alt="">
-                          Reminders
-                      </button>
-                  </div>
-                  <div class="iconsandlist">
-                      <button mat-button class="sidenav-button" >
-                          <img class="sidenav-img" src="../../../assets/mode_black_24dp.svg" alt="">
-                          Edit labels
-                      </button>
-                  </div>
-                  <div class="iconsandlist">
-                      <button mat-button class="sidenav-button"(click)="Archive()">
-                          <img class="sidenav-img" src="../../../assets/archive_black_24dp.svg" alt="">
-                          Archives
-                      </button>
-                  </div>
-                  <div class="iconsandlist">
-                      <button mat-button class="sidenav-button" (click)="Trash()">
-                          <img class="sidenav-img" src="../../../assets/delete_black_24dp.svg" alt="">
-                          Trash
-                      </button>
-                  </div>
-               
+      <mat-sidenav mode="side" id="sidenav" [class.menu-open]="!isMenuOpen" [class.menu-close]="isMenuOpen" opened #snav
+        [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <div class="container">
+          <mat-nav-list>
+            <div class="iconsandlist">
+              <button mat-button class="sidenav-button" (click)="notes()">
+                <img class="sidenav-img" src="../../../assets/lightbulb_black_24dp.svg" alt="">
+                Notes
+              </button>
+            </div>
+            <div class="iconsandlist">
+              <button mat-button class="sidenav-button" (click)="Reminder()">
+                <img class="sidenav-img" src="../../../assets/notifications_black_24dp.svg" alt="">
+                Reminders
+              </button>
+            </div>
+            <div class="iconsandlist">
+              <button mat-button class="sidenav-button">
+                <img class="sidenav-img" src="../../../assets/mode_black_24dp.svg" alt="">
+                Edit labels
+              </button>
+            </div>
+            <div class="iconsandlist">
+              <button mat-button class="sidenav-button" (click)="Archive()">
+                <img class="sidenav-img" src="../../../assets/archive_black_24dp.svg" alt="">
+                Archives
+              </button>
+            </div>
+            <div class="iconsandlist">
+              <button mat-button class="sidenav-button" (click)="Trash()">
+                <img class="sidenav-img" src="../../../assets/delete_black_24dp.svg" alt="">
+                Trash
+              </button>
+            </div>
 
-              </mat-nav-list>
-          </div>
+
+          </mat-nav-list>
+        </div>
       </mat-sidenav>
-
-
-
-
       <mat-sidenav-content>
 
         <router-outlet></router-outlet>
 
       </mat-sidenav-content>
-      
+
     </mat-sidenav-container>
     <!-- </div> -->
-
-
   </div>
-
 </div>

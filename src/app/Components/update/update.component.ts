@@ -32,7 +32,7 @@ export class UpdateComponent implements OnInit {
   Updatenotes(){
 
     let updatenoteobject={
-
+      // this noteId, title,description is coming from backend API
       noteId:this.data.id,
       title:this.title,
       description:this.description,

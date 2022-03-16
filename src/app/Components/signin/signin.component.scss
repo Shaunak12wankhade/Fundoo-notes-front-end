@@ -1,15 +1,13 @@
-
 .section{
     // border: 2px solid rebeccapurple;
     width: 99vw;
     height: 100vh;
     background-color: white;
 }
+
 .form{
-    border: 1px solid grey;
+    border: 1px solid gainsboro;
     display: flex;
-   
-    // justify-content: center;
     width: 30%;
     height: 78%;
     position: relative;
@@ -169,38 +167,6 @@
 
 }
 
-// .forgotpasswordbutton{
-//     position: relative;
-//     left: 0%;
-//     width: 70%;
-//     top: 4%;
-//     font-size: 14px;
-//     height: 40px;
-//     padding: 6px 8px;
-//     margin: 2px;
-
-// }
-
-// .button5{
-//     // border: 1px solid red;
-//     position: relative;
-//     right: 1%;
-//     left: 9%;
-//     bottom: 10%;
-//     // top: 15%;
-//     // color: blue;
-//     font-family: "Google Sans",Roboto,Arial,sans-serif;
-//     color: var(--gm-colortextbutton-ink-color,#1a73e8);
-//     background-color: transparent;
-//     font-size: .875rem;
-//     letter-spacing: .0107142857em;
-//     font-weight: 500;
-//     text-transform: none;
-//     cursor: pointer;
-
-
-// }
-
 .paragraph{
     // border: 2px solid red;
     color: #5f6368;
@@ -298,3 +264,12 @@
     border: none;
 
 }
+
+// @media screen and (max-width:600px){
+//     .section{
+//         // border: 2px solid rebeccapurple;
+//         width: 99vw;
+//         height: 100vh;
+//         background-color: white;
+//     }
+// }

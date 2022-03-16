@@ -1,11 +1,7 @@
 <!-- <p>createnotes works!</p> -->
 <div class="section" fxLayout="column" fxLayoutAlign="space-evenly center">
-
     <form [formGroup]="createnotesForm" (ngSubmit)="onSubmit()">
-
         <div class="createnote">
-
-
             <div class="takeanote" *ngIf="!writenote" (click)="takeanote()" fxLayout="column"
                 fxLayoutAlign="center center">
 
@@ -32,7 +28,6 @@
 
             </div>
 
-
             <div class="title" *ngIf="writenote" fxLayout="column" fxLayoutAlign="center center">
 
                 <!-- <mat-form-field class="matform2" appearance="outline"> -->
@@ -53,7 +48,8 @@
                 <!-- </mat-form-field> -->
 
                 <div class="closebutton1" fxLayout="row" fxLayoutAlign="space-between center">
-                    <app-icons [notecard]="{isDeleted:false,isArchived:false}" ></app-icons>   <!--we are doinf this for restore and permanant delete-->
+                    <app-icons [notecard]="{isDeleted:false,isArchived:false}"></app-icons>
+                    <!--we are doinf this for restore and permanant delete-->
                     <!-- <button class="close" (click)="onSubmit()" >Close</button> -->
 
                     <button style="margin-left: 65%;" (click)="onSubmit()" mat-stroked-button>close</button>
@@ -61,12 +57,6 @@
                 </div>
 
             </div>
-
-
-
         </div>
-
     </form>
-
-
 </div>

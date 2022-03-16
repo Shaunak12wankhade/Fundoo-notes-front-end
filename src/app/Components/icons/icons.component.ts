@@ -17,7 +17,7 @@ export class IconsComponent implements OnInit {
 
   colors = [
     {
-      name: 'Red', bgColorValue: '#f28b82'
+      name: 'Red', bgColorValue: '#f28b82' // this format of color in #f28b82 is called as hexadecimal
     },  
     // {
     //   name: 'Pink', bgColorValue: '#FFEBCC'
@@ -65,7 +65,7 @@ export class IconsComponent implements OnInit {
 
     let reqdata={
       
-      noteIdList: [this.notecard.id],
+      noteIdList: [this.notecard.id], //this notecard is coming from display.html - <app-icons & this noteIdlist is taken as a assumption by ourselves for taking id of notes
       isArchived:true,  // it is coming from backend api
     }
     this.note.userarchivenotes(reqdata).subscribe((response:any) =>{
@@ -82,7 +82,7 @@ export class IconsComponent implements OnInit {
      
     let reqdata={
       
-      noteIdList: [this.notecard.id],
+      noteIdList: [this.notecard.id], //this notecard is coming from display.html - <app-icons & this noteIdlist is taken as a assumption by ourselves for taking id of notes
       isArchived:false,  // it is coming from backend api
     }
     this.note.userarchivenotes(reqdata).subscribe((response:any) =>{
@@ -102,6 +102,7 @@ export class IconsComponent implements OnInit {
     this.notecard.noteColor= noteColor;
     let reqdata={
       
+      //this notecard is coming from display.html - <app-icons & this noteIdlist is taken as a assumption by ourselves for taking id of notes
       noteIdList: [this.notecard.id],  // this noteIdlist is a key where we are storing our id as a value
       color: noteColor
     }

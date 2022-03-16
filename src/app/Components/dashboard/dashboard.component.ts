@@ -1,8 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
+import { MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
-
-
 
 @Component({
   selector: 'app-dashboard',
@@ -10,14 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  isMenuOpen=true;
-  contentMargin=200;
+  isMenuOpen = true;
+  contentMargin = 200;
 
   mobileQuery: MediaQueryList;
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private route:Router) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private route: Router) {
 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -29,43 +27,33 @@ export class DashboardComponent implements OnInit {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  onToolbarMenuToggle(){
+  onToolbarMenuToggle() {
     this.isMenuOpen = !this.isMenuOpen;
-    if(!this.isMenuOpen)
-    {
-      this.contentMargin=50;
+    if (!this.isMenuOpen) {
+      this.contentMargin = 50;
     }
-    else{
-      this.contentMargin=400;
+    else {
+      this.contentMargin = 400;
     }
   }
 
-  notes(){
+  notes() {
     this.route.navigateByUrl('dashboard/getallnotes')
   }
-  Archive(){
+  Archive() {
     this.route.navigateByUrl('dashboard/archiveNotes')
   }
-  Trash(){
+  Trash() {
     this.route.navigateByUrl('dashboard/trash')
   }
-  Reminder(){
+  Reminder() {
     this.route.navigateByUrl('dashboard/reminderNotes')
   }
 
-  Logout(){
+  Logout() {
     localStorage.removeItem('token');
     this.route.navigateByUrl('/signin')
   }
-
-
-
-
-  // ngOnDestroy(): void {
-  //   this.mobileQuery.removeListener(this._mobileQueryListener);
-  // }
-
-  // shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
 }
 
 
